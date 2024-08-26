@@ -1,7 +1,7 @@
-Action 0x0                     | ID: 0x0 | Target Menu: None | 2d91d
+Action 0x0                     | ID: 0x0 | Target Menu: None
 	END
 
-Bash                           | ID: 0x1 | Target Menu: Enemy | 2d91e
+Bash                           | ID: 0x1 | Target Menu: Enemy
 	Target Selected
 	jumpIfNOT; Attacker & Target Alive -> Line 10
 	jumpIf; Check Blind -> Line 10
@@ -30,7 +30,7 @@ Bash                           | ID: 0x1 | Target Menu: Enemy | 2d91e
 	Effect: Inflict Damage
 	END
 
-Combo                          | ID: 0x2 | Target Menu: Enemy | 2d954
+Combo                          | ID: 0x2 | Target Menu: Enemy
 	Target Selected
 	playAttackSound
 	displayText: 04
@@ -41,7 +41,7 @@ Combo                          | ID: 0x2 | Target Menu: Enemy | 2d954
 	Subroutine -> Line 12
 	END
 
-Bite                           | ID: 0x3 | Target Menu: Enemy | 2d967
+Bite                           | ID: 0x3 | Target Menu: Enemy
 	Target Selected
 	playAttackSound
 	displayText: 08
@@ -53,26 +53,26 @@ Bite                           | ID: 0x3 | Target Menu: Enemy | 2d967
 	Effect: Inflict Damage
 	END
 
-Scratch                        | ID: 0x4 | Target Menu: Enemy | 2d97b
+Scratch                        | ID: 0x4 | Target Menu: Enemy
 	Target Selected
 	playAttackSound
 	displayText: 09
-	Unconditional -> Line 48
+	Jump -> Line 48
 
-Bore down                      | ID: 0x5 | Target Menu: Enemy | 2d983
+Bore down                      | ID: 0x5 | Target Menu: Enemy
 	Target Selected
 	playAttackSound
 	displayText: 0a
-	Unconditional -> Line 48
+	Jump -> Line 48
 
-Run over                       | ID: 0x6 | Target Menu: Enemy | 2d98b
+Run over                       | ID: 0x6 | Target Menu: Enemy
 	Target Selected
 	playAttackSound
 	displayText: 13
 	setNum: 15
-	Unconditional -> Line 49
+	Jump -> Line 49
 
-Desperate Attack               | ID: 0x7 | Target Menu: Enemy | 2d995
+Desperate Attack               | ID: 0x7 | Target Menu: Enemy
 	Target Selected
 	playSound: Crit
 	displayText: 15
@@ -85,11 +85,11 @@ Desperate Attack               | ID: 0x7 | Target Menu: Enemy | 2d995
 	displayText: 14
 	END
 	Subroutine -> Already Dead Logic
-	Unconditional -> Line 84
+	Jump -> Line 84
 	Subroutine -> Blind Logic
-	Unconditional -> Line 84
+	Jump -> Line 84
 
-Giegue Attack                  | ID: 0x8 | Target Menu: None | 2d9b6
+Giegue Attack                  | ID: 0x8 | Target Menu: None
 	GiegueSpeech
 	Target Enemy Team Leader
 	playSound: Giegue Attack
@@ -103,7 +103,7 @@ Giegue Attack                  | ID: 0x8 | Target Menu: None | 2d9b6
 	END
 	END
 
-PK Fire a                      | ID: 0x9 | Target Menu: None | 2d9dd
+PK Fire a                      | ID: 0x9 | Target Menu: None
 	animate: Fire
 	readPSI: 2c
 	setNum: 20
@@ -117,19 +117,19 @@ PK Fire a                      | ID: 0x9 | Target Menu: None | 2d9dd
 	END
 	END
 
-PK Fire B                      | ID: 0xa | Target Menu: None | 2d9f7
+PK Fire B                      | ID: 0xa | Target Menu: None
 	animate: Fire
 	readPSI: 2d
 	setNum: 60
-	Unconditional -> Line 110
+	Jump -> Line 110
 
-PK Fire Y                      | ID: 0xb | Target Menu: None | 2da00
+PK Fire Y                      | ID: 0xb | Target Menu: None
 	animate: Fire
 	readPSI: 2e
 	setNum: 100
-	Unconditional -> Line 110
+	Jump -> Line 110
 
-PK Freeze a                    | ID: 0xc | Target Menu: Enemy | 2da25
+PK Freeze a                    | ID: 0xc | Target Menu: Enemy
 	animate: Freeze
 	readPSI: 28
 	setNum: 10
@@ -140,13 +140,13 @@ PK Freeze a                    | ID: 0xc | Target Menu: Enemy | 2da25
 	Effect: Inflict Damage
 	END
 
-PK Freeze B                    | ID: 0xd | Target Menu: Enemy | 2da35
+PK Freeze B                    | ID: 0xd | Target Menu: Enemy
 	animate: Freeze
 	readPSI: 29
 	setNum: 40
-	Unconditional -> Line 136
+	Jump -> Line 136
 
-PK Freeze O                    | ID: 0xe | Target Menu: None | 2da3e
+PK Freeze O                    | ID: 0xe | Target Menu: None
 	animate: Freeze
 	readPSI: 2b
 	setNum: 80
@@ -160,7 +160,7 @@ PK Freeze O                    | ID: 0xe | Target Menu: None | 2da3e
 	END
 	END
 
-PK Freeze Y                    | ID: 0xf | Target Menu: Enemy | 2da51
+PK Freeze Y                    | ID: 0xf | Target Menu: Enemy
 	animate: Freeze
 	readPSI: 2a
 	Target Selected
@@ -169,13 +169,13 @@ PK Freeze Y                    | ID: 0xf | Target Menu: Enemy | 2da51
 	Effect: Cryo Freeze
 	END
 
-Bomb                           | ID: 0x10 | Target Menu: None | 2da5d
+Bomb                           | ID: 0x10 | Target Menu: None
 	animate: Bomb
 	readConsumable: 23
 	setNum: 60
-	Unconditional -> Line 110
+	Jump -> Line 110
 
-Super Bomb                     | ID: 0x11 | Target Menu: None | 2da66
+Super Bomb                     | ID: 0x11 | Target Menu: None
 	animate: Bomb
 	readConsumable: 24
 	Subroutine -> Line 1025
@@ -183,7 +183,7 @@ Super Bomb                     | ID: 0x11 | Target Menu: None | 2da66
 	Effect: Recoil Damage
 	END
 
-PK Beam a                      | ID: 0x12 | Target Menu: Enemy | 2da72
+PK Beam a                      | ID: 0x12 | Target Menu: Enemy
 	animate: Beam
 	readPSI: 30
 	setNum: 30
@@ -194,13 +194,13 @@ PK Beam a                      | ID: 0x12 | Target Menu: Enemy | 2da72
 	Effect: Inflict Damage
 	END
 
-PK Beam B                      | ID: 0x13 | Target Menu: Enemy | 2da8c
+PK Beam B                      | ID: 0x13 | Target Menu: Enemy
 	animate: Beam
 	readPSI: 31
 	setNum: 80
-	Unconditional -> Line 190
+	Jump -> Line 190
 
-PK Beam O                      | ID: 0x14 | Target Menu: None | 2da9f
+PK Beam O                      | ID: 0x14 | Target Menu: None
 	animate: Beam
 	readPSI: 33
 	setNum: 180
@@ -214,7 +214,7 @@ PK Beam O                      | ID: 0x14 | Target Menu: None | 2da9f
 	END
 	END
 
-PK Beam Y                      | ID: 0x15 | Target Menu: Enemy | 2dab2
+PK Beam Y                      | ID: 0x15 | Target Menu: Enemy
 	animate: Beam
 	readPSI: 32
 	Target Selected
@@ -226,9 +226,9 @@ PK Beam Y                      | ID: 0x15 | Target Menu: Enemy | 2dab2
 	END
 	displayText: 52
 	Target Self
-	Unconditional -> Line 223
+	Jump -> Line 223
 
-Bug Spray                      | ID: 0x16 | Target Menu: None | 2daf6
+Bug Spray                      | ID: 0x16 | Target Menu: None
 	animate: Attack
 	readBreakable: 19
 	Subroutine -> Line 237
@@ -245,9 +245,9 @@ Bug Spray                      | ID: 0x16 | Target Menu: None | 2daf6
 	END
 	END
 	displayText: 12
-	Unconditional -> Line 244
+	Jump -> Line 244
 
-PK Thunder                     | ID: 0x17 | Target Menu: Enemy | 2daca
+PK Thunder                     | ID: 0x17 | Target Menu: Enemy
 	animate: Thunder
 	readPSI: 34
 	setNum: 10
@@ -258,20 +258,20 @@ PK Thunder                     | ID: 0x17 | Target Menu: Enemy | 2daca
 	Effect: Inflict Damage
 	END
 
-PK Flash                       | ID: 0x18 | Target Menu: Enemy | 2dada
+PK Flash                       | ID: 0x18 | Target Menu: Enemy
 	animate: Thunder
 	readPSI: 35
 	setNum: 50
-	Unconditional -> Line 254
+	Jump -> Line 254
 
-Explode                        | ID: 0x19 | Target Menu: None | 2de65
+Explode                        | ID: 0x19 | Target Menu: None
 	playSound: Bomb
 	displayText: 1e
 	Subroutine -> Line 175
 	Effect: Kill Self
 	END
 
-Burst                          | ID: 0x1a | Target Menu: None | 2de79
+Burst                          | ID: 0x1a | Target Menu: None
 	playSound: Fire
 	displayText: 1f
 	setNum: 30
@@ -279,7 +279,7 @@ Burst                          | ID: 0x1a | Target Menu: None | 2de79
 	Effect: Kill Self
 	END
 
-Offense Up                     | ID: 0x1b | Target Menu: Ally | 2db81
+Offense Up                     | ID: 0x1b | Target Menu: Ally
 	animate: Nothing
 	readPSI: 20
 	Target Selected
@@ -287,20 +287,20 @@ Offense Up                     | ID: 0x1b | Target Menu: Ally | 2db81
 	Effect: Raise Offense
 	END
 
-Sing                           | ID: 0x1c | Target Menu: None | 2d9c9
+Sing                           | ID: 0x1c | Target Menu: None
 	Target Enemy Team Leader
 	displayText: 5a
 	repeatTimes; 4
 	jumpIfNOT; Attacker & Target Alive -> Line 299
 	jumpIfNOT; is Giegue Fight -> Line 298
 	Effect: Sing
-	Unconditional -> Line 299
+	Jump -> Line 299
 	displayText: 12
 	Target Next
 	END
 	END
 
-Defense Up a                   | ID: 0x1d | Target Menu: Ally | 2db8c
+Defense Up a                   | ID: 0x1d | Target Menu: Ally
 	animate: Nothing
 	readPSI: 21
 	Target Selected
@@ -308,7 +308,7 @@ Defense Up a                   | ID: 0x1d | Target Menu: Ally | 2db8c
 	Effect: Raise Defense
 	END
 
-Defense Up B                   | ID: 0x1e | Target Menu: None | 2db9d
+Defense Up B                   | ID: 0x1e | Target Menu: None
 	animate: Nothing
 	readPSI: 22
 	Target Player Team Leader
@@ -320,7 +320,7 @@ Defense Up B                   | ID: 0x1e | Target Menu: None | 2db9d
 	END
 	END
 
-Quick Up                       | ID: 0x1f | Target Menu: Ally | 2dbae
+Quick Up                       | ID: 0x1f | Target Menu: Ally
 	animate: Nothing
 	readPSI: 23
 	Target Selected
@@ -329,11 +329,11 @@ Quick Up                       | ID: 0x1f | Target Menu: Ally | 2dbae
 	Effect: Raise Speed
 	END
 
-Action 0x20                    | ID: 0x20 | Target Menu: Ally | 2dec6
+Action 0x20                    | ID: 0x20 | Target Menu: Ally
 
-Action 0x21                    | ID: 0x21 | Target Menu: None | 2dec6
+Action 0x21                    | ID: 0x21 | Target Menu: None
 
-Scary Words                    | ID: 0x22 | Target Menu: Enemy | 2dc11
+Scary Words                    | ID: 0x22 | Target Menu: Enemy
 	displayText: 32
 	setNum: 30
 	Target Selected
@@ -342,14 +342,14 @@ Scary Words                    | ID: 0x22 | Target Menu: Enemy | 2dc11
 	Effect: Lower Fight
 	END
 
-Nasty Words                    | ID: 0x23 | Target Menu: Enemy | 2dc1d
+Nasty Words                    | ID: 0x23 | Target Menu: Enemy
 	displayText: 33
 	setNum: 20
-	Unconditional -> Line 339
+	Jump -> Line 339
 
-Action 0x24                    | ID: 0x24 | Target Menu: None | 2dec6
+Action 0x24                    | ID: 0x24 | Target Menu: None
 
-Defense Down a                 | ID: 0x25 | Target Menu: Enemy | 2dbcc
+Defense Down a                 | ID: 0x25 | Target Menu: Enemy
 	animate: Status with Wait
 	readPSI: 24
 	setNum: 40
@@ -361,11 +361,11 @@ Defense Down a                 | ID: 0x25 | Target Menu: Enemy | 2dbcc
 	Effect: Defense Down PSI
 	END
 
-Action 0x26                    | ID: 0x26 | Target Menu: None | 2dec6
+Action 0x26                    | ID: 0x26 | Target Menu: None
 
-Action 0x27                    | ID: 0x27 | Target Menu: None | 2dec6
+Action 0x27                    | ID: 0x27 | Target Menu: None
 
-Rage                           | ID: 0x28 | Target Menu: None | 2dbbb
+Rage                           | ID: 0x28 | Target Menu: None
 	setNum: 25
 	Target Self
 	displayText: 2a
@@ -373,7 +373,7 @@ Rage                           | ID: 0x28 | Target Menu: None | 2dbbb
 	Effect: Rage
 	END
 
-Lifeup a                       | ID: 0x29 | Target Menu: Ally | 2dce3
+Lifeup a                       | ID: 0x29 | Target Menu: Ally
 	animate: Nothing
 	readPSI: 08
 	setNum: 30
@@ -382,13 +382,13 @@ Lifeup a                       | ID: 0x29 | Target Menu: Ally | 2dce3
 	Effect: Recover HP
 	END
 
-Lifeup B                       | ID: 0x2a | Target Menu: Ally | 2dcf0
+Lifeup B                       | ID: 0x2a | Target Menu: Ally
 	animate: Nothing
 	readPSI: 09
 	setNum: 80
-	Unconditional -> Line 380
+	Jump -> Line 380
 
-Lifeup Y                       | ID: 0x2b | Target Menu: Ally | 2dcf9
+Lifeup Y                       | ID: 0x2b | Target Menu: Ally
 	animate: Nothing
 	readPSI: 0a
 	Target Selected
@@ -396,7 +396,7 @@ Lifeup Y                       | ID: 0x2b | Target Menu: Ally | 2dcf9
 	Effect: Max HP
 	END
 
-Lifeup P                       | ID: 0x2c | Target Menu: None | 2dd04
+Lifeup P                       | ID: 0x2c | Target Menu: None
 	animate: Nothing
 	readPSI: 0b
 	setNum: 50
@@ -409,7 +409,7 @@ Lifeup P                       | ID: 0x2c | Target Menu: None | 2dd04
 	END
 	END
 
-Lifeup O                       | ID: 0x2d | Target Menu: None | 2dd17
+Lifeup O                       | ID: 0x2d | Target Menu: None
 	animate: Nothing
 	readPSI: 0c
 	Target Player Team Leader
@@ -421,12 +421,12 @@ Lifeup O                       | ID: 0x2d | Target Menu: None | 2dd17
 	END
 	END
 
-Restore Energy                 | ID: 0x2e | Target Menu: Ally | 2dd28
+Restore Energy                 | ID: 0x2e | Target Menu: Ally
 	Target Selected
 	displayText: 3f
-	Unconditional -> Line 394
+	Jump -> Line 394
 
-PSI Stone                      | ID: 0x2f | Target Menu: None | 2dd2e
+PSI Stone                      | ID: 0x2f | Target Menu: None
 	animate: Nothing
 	readBreakable: 49
 	setNum: 20
@@ -436,7 +436,7 @@ PSI Stone                      | ID: 0x2f | Target Menu: None | 2dd2e
 	scriptPSIStone: 49
 	END
 
-PSI Magnet                     | ID: 0x30 | Target Menu: Enemy | 2de85
+PSI Magnet                     | ID: 0x30 | Target Menu: Enemy
 	animate: Status with Wait
 	readPSI: 1d
 	Target Selected
@@ -447,7 +447,7 @@ PSI Magnet                     | ID: 0x30 | Target Menu: Enemy | 2de85
 	Effect: Magnet
 	END
 
-Darkness                       | ID: 0x31 | Target Menu: Enemy | 2db1e
+Darkness                       | ID: 0x31 | Target Menu: Enemy
 	animate: Status with Wait
 	readPSI: 1c
 	Target Selected
@@ -457,7 +457,7 @@ Darkness                       | ID: 0x31 | Target Menu: Enemy | 2db1e
 	Effect: Blind
 	END
 
-Exhaust                        | ID: 0x32 | Target Menu: None | 2dc24
+Exhaust                        | ID: 0x32 | Target Menu: None
 	Target Enemy Team Leader
 	playAttackSound
 	displayText: 4a
@@ -474,9 +474,9 @@ Exhaust                        | ID: 0x32 | Target Menu: None | 2dc24
 	END
 	END
 
-Action 0x33                    | ID: 0x33 | Target Menu: None | 2dec6
+Action 0x33                    | ID: 0x33 | Target Menu: None
 
-Dehydrate                      | ID: 0x34 | Target Menu: Enemy | 2dc3e
+Dehydrate                      | ID: 0x34 | Target Menu: Enemy
 	Target Selected
 	playAttackSound
 	displayText: 04
@@ -489,9 +489,9 @@ Dehydrate                      | ID: 0x34 | Target Menu: Enemy | 2dc3e
 	Effect: Lower Defense
 	END
 
-Action 0x35                    | ID: 0x35 | Target Menu: None | 2dec6
+Action 0x35                    | ID: 0x35 | Target Menu: None
 
-PSI Block                      | ID: 0x36 | Target Menu: Enemy | 2ddd3
+PSI Block                      | ID: 0x36 | Target Menu: Enemy
 	animate: Status with Wait
 	readPSI: 1f
 	Target Selected
@@ -502,7 +502,7 @@ PSI Block                      | ID: 0x36 | Target Menu: Enemy | 2ddd3
 	Effect: Block
 	END
 
-Powershield                    | ID: 0x37 | Target Menu: Ally | 2dde5
+Powershield                    | ID: 0x37 | Target Menu: Ally
 	animate: Nothing
 	readPSI: 17
 	Target Selected
@@ -510,7 +510,7 @@ Powershield                    | ID: 0x37 | Target Menu: Ally | 2dde5
 	Effect: Powershield
 	END
 
-PSI Shield a                   | ID: 0x38 | Target Menu: Ally | 2ddf0
+PSI Shield a                   | ID: 0x38 | Target Menu: Ally
 	animate: Nothing
 	readPSI: 15
 	Target Selected
@@ -518,7 +518,7 @@ PSI Shield a                   | ID: 0x38 | Target Menu: Ally | 2ddf0
 	Effect: Shield
 	END
 
-PSI Shield B                   | ID: 0x39 | Target Menu: None | 2ddfb
+PSI Shield B                   | ID: 0x39 | Target Menu: None
 	animate: Nothing
 	readPSI: 16
 	Target Player Team Leader
@@ -529,11 +529,11 @@ PSI Shield B                   | ID: 0x39 | Target Menu: None | 2ddfb
 	END
 	END
 
-Action 0x3a                    | ID: 0x3a | Target Menu: None | 2dec6
+Action 0x3a                    | ID: 0x3a | Target Menu: None
 
-Action 0x3b                    | ID: 0x3b | Target Menu: None | 2dec6
+Action 0x3b                    | ID: 0x3b | Target Menu: None
 
-Megaphone                      | ID: 0x3c | Target Menu: Enemy | 2dc54
+Megaphone                      | ID: 0x3c | Target Menu: Enemy
 	animate: Nothing
 	readItem: 70
 	Target Selected
@@ -551,7 +551,7 @@ Megaphone                      | ID: 0x3c | Target Menu: Enemy | 2dc54
 	Effect: Rage
 	END
 
-Stinger                        | ID: 0x3d | Target Menu: Enemy | 2dbdf
+Stinger                        | ID: 0x3d | Target Menu: Enemy
 	animate: Nothing
 	readConsumable: 21
 	Target Selected
@@ -562,7 +562,7 @@ Stinger                        | ID: 0x3d | Target Menu: Enemy | 2dbdf
 	Effect: Poison
 	END
 
-Stone Spray                    | ID: 0x3e | Target Menu: Enemy | 2dc81
+Stone Spray                    | ID: 0x3e | Target Menu: Enemy
 	animate: Nothing
 	readConsumable: 20
 	Target Selected
@@ -573,7 +573,7 @@ Stone Spray                    | ID: 0x3e | Target Menu: Enemy | 2dc81
 	Effect: Petrify
 	END
 
-Spew                           | ID: 0x3f | Target Menu: Enemy | 2db34
+Spew                           | ID: 0x3f | Target Menu: Enemy
 	playAttackSound
 	displayText: 1a
 	Target Selected
@@ -582,7 +582,7 @@ Spew                           | ID: 0x3f | Target Menu: Enemy | 2db34
 	Effect: Blind
 	END
 
-Confuse Ray                    | ID: 0x40 | Target Menu: Enemy | 2db40
+Confuse Ray                    | ID: 0x40 | Target Menu: Enemy
 	playSound: Status with Wait
 	Target Selected
 	displayText: 2c
@@ -595,17 +595,17 @@ Confuse Ray                    | ID: 0x40 | Target Menu: Enemy | 2db40
 	Effect: Confuse
 	END
 
-Demon Seed                     | ID: 0x41 | Target Menu: Enemy | 2db56
+Demon Seed                     | ID: 0x41 | Target Menu: Enemy
 	playSound: Status with Wait
 	displayText: 76
-	Unconditional -> Line 589
+	Jump -> Line 589
 
-Brainshock                     | ID: 0x42 | Target Menu: Enemy | 2db5d
+Brainshock                     | ID: 0x42 | Target Menu: Enemy
 	animate: Status with Wait
 	readPSI: 18
-	Unconditional -> Line 589
+	Jump -> Line 589
 
-Braincyclone                   | ID: 0x43 | Target Menu: None | 2db64
+Braincyclone                   | ID: 0x43 | Target Menu: None
 	animate: Status with Wait
 	readPSI: 19
 	Target Enemy Team Leader
@@ -620,9 +620,9 @@ Braincyclone                   | ID: 0x43 | Target Menu: None | 2db64
 	END
 	END
 	displayText: 12
-	Unconditional -> Line 619
+	Jump -> Line 619
 
-Hypnosis a                     | ID: 0x44 | Target Menu: Enemy | 2dc93
+Hypnosis a                     | ID: 0x44 | Target Menu: Enemy
 	animate: Status with Wait
 	readPSI: 1a
 	Target Selected
@@ -634,7 +634,7 @@ Hypnosis a                     | ID: 0x44 | Target Menu: Enemy | 2dc93
 	Effect: Sleep
 	END
 
-Paralysis a                    | ID: 0x45 | Target Menu: Enemy | 2dca8
+Paralysis a                    | ID: 0x45 | Target Menu: Enemy
 	animate: Status with Wait
 	readPSI: 1b
 	Target Selected
@@ -644,12 +644,12 @@ Paralysis a                    | ID: 0x45 | Target Menu: Enemy | 2dca8
 	Effect: Para
 	END
 
-Trips                          | ID: 0x46 | Target Menu: None | 2de49
+Trips                          | ID: 0x46 | Target Menu: None
 	playSound: Miss
 	displayText: 45
 	END
 
-Rope                           | ID: 0x47 | Target Menu: Enemy | 2dcd7
+Rope                           | ID: 0x47 | Target Menu: Enemy
 	animate: Nothing
 	readConsumable: 28
 	Target Selected
@@ -658,7 +658,7 @@ Rope                           | ID: 0x47 | Target Menu: Enemy | 2dcd7
 	Effect: Bind
 	END
 
-Run                            | ID: 0x48 | Target Menu: None | 2de09
+Run                            | ID: 0x48 | Target Menu: None
 	Target Team Leader
 	displayText: 43
 	jumpIf; 50% Chance -> Line 673
@@ -673,15 +673,15 @@ Run                            | ID: 0x48 | Target Menu: None | 2de09
 	displayText: 44
 	END
 
-Call Ally                      | ID: 0x49 | Target Menu: None | 2de97
+Call Ally                      | ID: 0x49 | Target Menu: None
 	callForHelp
 	END
 
-Sprout Seeds                   | ID: 0x4a | Target Menu: None | 2de99
+Sprout Seeds                   | ID: 0x4a | Target Menu: None
 	sproutSeeds
 	END
 
-Steal Food                     | ID: 0x4b | Target Menu: Enemy | 2de9b
+Steal Food                     | ID: 0x4b | Target Menu: Enemy
 	Target Selected
 	jumpIfNOT; Attacker & Target Alive -> Line 5
 	jumpIf; Check Blind -> Line 5
@@ -689,23 +689,23 @@ Steal Food                     | ID: 0x4b | Target Menu: Enemy | 2de9b
 	Effect: Steal Food
 	END
 
-Laughs                         | ID: 0x4c | Target Menu: None | 2de4e
+Laughs                         | ID: 0x4c | Target Menu: None
 	displayText: 30
 	END
 
-Hypnosis B                     | ID: 0x4d | Target Menu: None | 2dec6
+Hypnosis B                     | ID: 0x4d | Target Menu: None
 
-Paralysis B                    | ID: 0x4e | Target Menu: None | 2dec6
+Paralysis B                    | ID: 0x4e | Target Menu: None
 
-Plays dead                     | ID: 0x4f | Target Menu: None | 2de51
+Plays dead                     | ID: 0x4f | Target Menu: None
 	displayText: 34
 	END
 
-Prays                          | ID: 0x50 | Target Menu: None | 2de54
+Prays                          | ID: 0x50 | Target Menu: None
 	displayText: 57
 	END
 
-bonus EXP                      | ID: 0x51 | Target Menu: Enemy | 2dea7
+bonus EXP                      | ID: 0x51 | Target Menu: Enemy
 	displayText: 58
 	Target Self
 	playSound: Run
@@ -715,38 +715,38 @@ bonus EXP                      | ID: 0x51 | Target Menu: Enemy | 2dea7
 	Effect: Bonus EXP
 	END
 
-Action 0x52                    | ID: 0x52 | Target Menu: None | 2dec6
+Action 0x52                    | ID: 0x52 | Target Menu: None
 
-Guard                          | ID: 0x53 | Target Menu: None | 2de1f
+Guard                          | ID: 0x53 | Target Menu: None
 	displayText: 59
 	Target Self
 	Effect: Guard
 	END
 
-Confuse Self                   | ID: 0x54 | Target Menu: None | 2deb3
+Confuse Self                   | ID: 0x54 | Target Menu: None
 	playAttackSound
 	displayText: 66
 	Target Self
 	Effect: Confuse Self
 	END
 
-Venom Bite                     | ID: 0x55 | Target Menu: None | 2dec6
+Venom Bite                     | ID: 0x55 | Target Menu: None 
 
-Reckless                       | ID: 0x56 | Target Menu: None | 2dec6
+Reckless                       | ID: 0x56 | Target Menu: None
 
-Action 0x57                    | ID: 0x57 | Target Menu: Enemy | 2dec6
+Action 0x57                    | ID: 0x57 | Target Menu: Enemy
 
-Ram                            | ID: 0x58 | Target Menu: None | 2dec6
+Ram                            | ID: 0x58 | Target Menu: None
 
-Defend                         | ID: 0x59 | Target Menu: None | 2de25
+Defend                         | ID: 0x59 | Target Menu: None
 	displayText: 5b
 	Target Self
 	Effect: Guard
 	END
 
-Action 0x5a                    | ID: 0x5a | Target Menu: None | 2dec6
+Action 0x5a                    | ID: 0x5a | Target Menu: None
 
-Healing a                      | ID: 0x5b | Target Menu: Ally | 2dd82
+Healing a                      | ID: 0x5b | Target Menu: Ally
 	animate: Nothing
 	readPSI: 10
 	Target Selected
@@ -754,7 +754,7 @@ Healing a                      | ID: 0x5b | Target Menu: Ally | 2dd82
 	Effect: Heal Poison
 	END
 
-Dimension Slip                 | ID: 0x5c | Target Menu: None | 2de2b
+Dimension Slip                 | ID: 0x5c | Target Menu: None
 	animate: Dimension Slip
 	readPSI: 26
 	jumpIf; is Triggered Battle -> Line 768
@@ -768,18 +768,18 @@ Dimension Slip                 | ID: 0x5c | Target Menu: None | 2de2b
 	displayText: 90
 	END
 
-Approach                       | ID: 0x5d | Target Menu: None | 2dbc5
+Approach                       | ID: 0x5d | Target Menu: None
 	playAttackSound
 	setNum: 20
 	Effect: Edge Closer
 	END
 
-Spawn                          | ID: 0x5e | Target Menu: None | 2debb
+Spawn                          | ID: 0x5e | Target Menu: None
 	Spawn
 	displayText: 03
 	END
 
-Angel Seed                     | ID: 0x5f | Target Menu: Ally | 2dd94
+Angel Seed                     | ID: 0x5f | Target Menu: Ally
 	animate: Nothing
 	readConsumable: 48
 	Target Selected
@@ -787,7 +787,7 @@ Angel Seed                     | ID: 0x5f | Target Menu: Ally | 2dd94
 	Effect: Heal Confusion
 	END
 
-Flea Bag                       | ID: 0x60 | Target Menu: Enemy | 2dc72
+Flea Bag                       | ID: 0x60 | Target Menu: Enemy
 	animate: Nothing
 	readConsumable: 1b
 	Target Selected
@@ -797,9 +797,9 @@ Flea Bag                       | ID: 0x60 | Target Menu: Enemy | 2dc72
 	Effect: Lower Defense
 	END
 
-Action 0x61                    | ID: 0x61 | Target Menu: None | 2dec6
+Action 0x61                    | ID: 0x61 | Target Menu: None 
 
-Puzzle                         | ID: 0x62 | Target Menu: Enemy | 2dccd
+Puzzle                         | ID: 0x62 | Target Menu: Enemy 
 	displayText: 04
 	Target Selected
 	jumpIfNOT; Attacker & Target Alive -> Already Dead Logic
@@ -807,7 +807,7 @@ Puzzle                         | ID: 0x62 | Target Menu: Enemy | 2dccd
 	Effect: Puzzle
 	END
 
-Healing B                      | ID: 0x63 | Target Menu: Ally | 2dd9f
+Healing B                      | ID: 0x63 | Target Menu: Ally 
 	animate: Nothing
 	readPSI: 11
 	Target Selected
@@ -815,7 +815,7 @@ Healing B                      | ID: 0x63 | Target Menu: Ally | 2dd9f
 	Effect: Heal Para
 	END
 
-Hyper Healing                  | ID: 0x64 | Target Menu: Ally | 2ddaa
+Hyper Healing                  | ID: 0x64 | Target Menu: Ally 
 	animate: Nothing
 	readPSI: 13
 	Target Selected
@@ -823,14 +823,14 @@ Hyper Healing                  | ID: 0x64 | Target Menu: Ally | 2ddaa
 	Effect: Heal Sleep
 	END
 
-Super Healing                  | ID: 0x65 | Target Menu: Ally | 2ddb5
+Super Healing                  | ID: 0x65 | Target Menu: Ally 
 	animate: Nothing
 	readPSI: 14
 	Target Selected
 	Effect: Heal Uncon
 	END
 
-Shield Off                     | ID: 0x66 | Target Menu: Enemy | 2de3e
+Shield Off                     | ID: 0x66 | Target Menu: Enemy 
 	animate: Nothing
 	readPSI: 1e
 	Target Selected
@@ -838,44 +838,44 @@ Shield Off                     | ID: 0x66 | Target Menu: Enemy | 2de3e
 	Effect: Shield Off
 	END
 
-Flamethrower                   | ID: 0x67 | Target Menu: None | 2da09
+Flamethrower                   | ID: 0x67 | Target Menu: None 
 	animate: Fire
 	readBreakable: 22
 	Subroutine -> Line 129
 	scriptBreakable: 22
 	END
 
-Action 0x68                    | ID: 0x68 | Target Menu: None | 2dec6
+Action 0x68                    | ID: 0x68 | Target Menu: None 
 
-Laser Beam                     | ID: 0x69 | Target Menu: Enemy | 2da82
+Laser Beam                     | ID: 0x69 | Target Menu: Enemy 
 	animate: Beam
 	readBreakable: 25
 	Subroutine -> Line 189
 	scriptBreakable: 25
 	END
 
-Death Beam                     | ID: 0x6a | Target Menu: Enemy | 2da95
+Death Beam                     | ID: 0x6a | Target Menu: Enemy 
 	animate: Beam
 	readBreakable: 26
 	Subroutine -> Line 200
 	scriptBreakable: 26
 	END
 
-Bold Smile                     | ID: 0x6b | Target Menu: None | 2db97
+Bold Smile                     | ID: 0x6b | Target Menu: None 
 	displayText: 28
 	Target Self
-	Unconditional -> Line 307
+	Jump -> Line 307
 
-Strange Howl                   | ID: 0x6c | Target Menu: Enemy | 2dbf1
+Strange Howl                   | ID: 0x6c | Target Menu: Enemy 
 	displayText: 1d
-	Unconditional -> Line 355
+	Jump -> Line 355
 
-Flashdark                      | ID: 0x6d | Target Menu: Enemy | 2db2d
+Flashdark                      | ID: 0x6d | Target Menu: Enemy 
 	animate: Nothing
 	readItem: 1f
-	Unconditional -> Line 453
+	Jump -> Line 453
 
-Sticky Machine                 | ID: 0x6e | Target Menu: Enemy | 2dcb7
+Sticky Machine                 | ID: 0x6e | Target Menu: Enemy 
 	animate: Nothing
 	readBreakable: 1e
 	Target Selected
@@ -886,46 +886,46 @@ Sticky Machine                 | ID: 0x6e | Target Menu: Enemy | 2dcb7
 	scriptBreakable: 1e
 	END
 
-Check                          | ID: 0x6f | Target Menu: Enemy | 2debf
+Check                          | ID: 0x6f | Target Menu: Enemy 
 	Target Selected
 	jumpIfNOT; Attacker & Target Alive -> Already Dead Logic
 	Check
 	END
 
-Action 0x70                    | ID: 0x70 | Target Menu: None | 2dec6
+Action 0x70                    | ID: 0x70 | Target Menu: None 
 
-Juice                          | ID: 0x71 | Target Menu: Ally | 2dd3d
+Juice                          | ID: 0x71 | Target Menu: Ally 
 	animate: Nothing
 	readConsumable: 3c
 	setNum: 10
-	Unconditional -> Line 380
+	Jump -> Line 380
 
-Fries                          | ID: 0x72 | Target Menu: Ally | 2dd46
+Fries                          | ID: 0x72 | Target Menu: Ally 
 	animate: Nothing
 	readConsumable: 3d
 	setNum: 20
-	Unconditional -> Line 380
+	Jump -> Line 380
 
-Herb                           | ID: 0x73 | Target Menu: Ally | 2dd4f
+Herb                           | ID: 0x73 | Target Menu: Ally 
 	animate: Nothing
 	readConsumable: 3e
 	setNum: 30
-	Unconditional -> Line 380
+	Jump -> Line 380
 
-Drink                          | ID: 0x74 | Target Menu: Ally | 2dd58
+Drink                          | ID: 0x74 | Target Menu: Ally 
 	animate: Nothing
 	readConsumable: 40
 	setNum: 100
-	Unconditional -> Line 380
+	Jump -> Line 380
 
-Big Bag                        | ID: 0x75 | Target Menu: Ally | 2dd61
+Big Bag                        | ID: 0x75 | Target Menu: Ally 
 	animate: Nothing
 	readBigBag: 01
 	Subroutine -> Line 912
 	scriptBigBag: 01
 	END
 
-Inhaler                        | ID: 0x76 | Target Menu: Ally | 2ddbd
+Inhaler                        | ID: 0x76 | Target Menu: Ally 
 	animate: Nothing
 	readItem: 42
 	Target Selected
@@ -933,56 +933,56 @@ Inhaler                        | ID: 0x76 | Target Menu: Ally | 2ddbd
 	Effect: Heal Asthma
 	END
 
-Super Spray                    | ID: 0x77 | Target Menu: None | 2db16
+Super Spray                    | ID: 0x77 | Target Menu: None 
 	animate: Attack
 	readItem: 1a
 	Subroutine -> Line 237
 	END
 
-Love Words                     | ID: 0x78 | Target Menu: Enemy | 2de57
+Love Words                     | ID: 0x78 | Target Menu: Enemy 
 	animate: Nothing
 	readItem: 1c
 	displayText: 72
 	END
 
-Swear Words                    | ID: 0x79 | Target Menu: Enemy | 2de5e
+Swear Words                    | ID: 0x79 | Target Menu: Enemy 
 	animate: Nothing
 	readItem: 1d
 	displayText: 73
 	END
 
-Burger                         | ID: 0x7a | Target Menu: Ally | 2dd6b
+Burger                         | ID: 0x7a | Target Menu: Ally 
 	animate: Nothing
 	readConsumable: 3f
 	setNum: 60
-	Unconditional -> Line 380
+	Jump -> Line 380
 
-Medicine                       | ID: 0x7b | Target Menu: Ally | 2dd74
+Medicine                       | ID: 0x7b | Target Menu: Ally 
 	animate: Nothing
 	readConsumable: 41
-	Unconditional -> Line 394
+	Jump -> Line 394
 
-Remedy                         | ID: 0x7c | Target Menu: Ally | 2dd8d
+Remedy                         | ID: 0x7c | Target Menu: Ally 
 	animate: Nothing
 	readConsumable: 43
-	Unconditional -> Line 752
+	Jump -> Line 752
 
-Pencil Rocket                  | ID: 0x7d | Target Menu: None | 2d9f0
+Pencil Rocket                  | ID: 0x7d | Target Menu: None 
 	animate: Fire
 	readConsumable: 61
-	Unconditional -> Line 109
+	Jump -> Line 109
 
-Lifenoodles                    | ID: 0x7e | Target Menu: None | 2dec6
+Lifenoodles                    | ID: 0x7e | Target Menu: None 
 
-Pendulum                       | ID: 0x7f | Target Menu: None | 2dec6
+Pendulum                       | ID: 0x7f | Target Menu: None 
 
-Para Gas                       | ID: 0x80 | Target Menu: Enemy | 2dcc8
+Para Gas                       | ID: 0x80 | Target Menu: Enemy 
 	displayText: 77
-	Unconditional -> Line 881
+	Jump -> Line 881
 
-Action 0x81                    | ID: 0x81 | Target Menu: None | 2dec6
+Action 0x81                    | ID: 0x81 | Target Menu: None 
 
-Defense Down B                 | ID: 0x82 | Target Menu: None | 2dbf6
+Defense Down B                 | ID: 0x82 | Target Menu: None 
 	Target Enemy Team Leader
 	animate: Status with Wait
 	readPSI: 25
@@ -997,9 +997,9 @@ Defense Down B                 | ID: 0x82 | Target Menu: None | 2dbf6
 	END
 	END
 	displayText: 12
-	Unconditional -> Line 996
+	Jump -> Line 996
 
-PK Thunder Y                   | ID: 0x83 | Target Menu: None | 2dae3
+PK Thunder Y                   | ID: 0x83 | Target Menu: None 
 	animate: Thunder
 	readPSI: 36
 	setNum: 60
@@ -1013,15 +1013,15 @@ PK Thunder Y                   | ID: 0x83 | Target Menu: None | 2dae3
 	END
 	END
 
-Bread                          | ID: 0x84 | Target Menu: Ally | 2dd7b
+Bread                          | ID: 0x84 | Target Menu: Ally 
 	animate: Nothing
 	readConsumable: 47
-	Unconditional -> Line 906
+	Jump -> Line 906
 
-PK Fire O                      | ID: 0x85 | Target Menu: None | 2da13
+PK Fire O                      | ID: 0x85 | Target Menu: None 
 	animate: Fire
 	readPSI: 2f
-	Unconditional -> Line 1025
+	Jump -> Line 1025
 	Target Enemy Team Leader
 	repeatTimes; 4
 	jumpIfNOT; Attacker & Target Alive -> Line 1030
@@ -1031,7 +1031,7 @@ PK Fire O                      | ID: 0x85 | Target Menu: None | 2da13
 	END
 	END
 
-Healing Y                      | ID: 0x86 | Target Menu: Ally | 2ddc8
+Healing Y                      | ID: 0x86 | Target Menu: Ally 
 	animate: Nothing
 	readPSI: 12
 	Target Selected
@@ -1039,9 +1039,9 @@ Healing Y                      | ID: 0x86 | Target Menu: Ally | 2ddc8
 	Effect: Heal Petrification
 	END
 
-Robo Missles                   | ID: 0x87 | Target Menu: None | 2dec6
+Robo Missles                   | ID: 0x87 | Target Menu: None 
 
-EVE Explosion                  | ID: 0x88 | Target Menu: None | 2de6f
+EVE Explosion                  | ID: 0x88 | Target Menu: None 
 	playSound: Bomb
 	displayText: 1e
 	Subroutine -> Line 1025
